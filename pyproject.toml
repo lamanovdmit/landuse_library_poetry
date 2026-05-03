@@ -1,0 +1,40 @@
+[project]
+name = "landuse-library-poetry"
+version = "0.1.0"
+description = "Библиотека для анализа структуры землепользования городских территорий"
+authors = [
+    {name = "lamanovdmit", email = "lamanovdmit@gmail.com"}
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.13"
+license = {text = "MIT"}
+keywords = ["landuse", "geopandas", "urban", "gis", "spatial-analysis"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+    "geopandas>=1.0.0",
+    "pandas>=2.0.0",
+    "loguru>=0.7.0",
+]
+
+[project.urls]
+Repository = "https://github.com/lamanovdmit/landuse_library_poetry"
+
+[tool.poetry]
+packages = [{include = "landuse_library_poetry", from = "src"}]
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">=4.0.0"
+black = ">=24.0.0"
+isort = ">=5.13.0"
+matplotlib = ">=3.8.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
